@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Athena.Stocks.Application", "Services\Stocks\Athena.Stocks.Application\Athena.Stocks.Application.csproj", "{C6B8F5D5-EDD7-4B07-B722-84438096BF5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Athena.Stocks.Infrastructure", "Services\Stocks\Athena.Stocks.Infrastructure\Athena.Stocks.Infrastructure.csproj", "{636F0BC6-0AF0-4FA9-AD1C-65D0E4F6B932}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Athena.Stocks.WebApi", "Services\Stocks\Athena.Stocks.WebApi\Athena.Stocks.WebApi.csproj", "{371E8DE2-8A6A-442A-B799-785E4339974C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Athena.Stocks.Domain", "Services\Stocks\Athena.Stocks.Domain\Athena.Stocks.Domain.csproj", "{98CD8C56-3617-425F-9D3C-1A99DDB15A70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D501001B-33B6-4337-A439-7E5453AEA00F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{998FC1DD-B1AD-4609-82B6-7B10C90C1901}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Stocks", "Stocks", "{C8EE44F5-159D-447B-9B83-2C78AFA53165}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6B8F5D5-EDD7-4B07-B722-84438096BF5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6B8F5D5-EDD7-4B07-B722-84438096BF5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6B8F5D5-EDD7-4B07-B722-84438096BF5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6B8F5D5-EDD7-4B07-B722-84438096BF5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{636F0BC6-0AF0-4FA9-AD1C-65D0E4F6B932}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{636F0BC6-0AF0-4FA9-AD1C-65D0E4F6B932}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{636F0BC6-0AF0-4FA9-AD1C-65D0E4F6B932}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{636F0BC6-0AF0-4FA9-AD1C-65D0E4F6B932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{371E8DE2-8A6A-442A-B799-785E4339974C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{371E8DE2-8A6A-442A-B799-785E4339974C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{371E8DE2-8A6A-442A-B799-785E4339974C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{371E8DE2-8A6A-442A-B799-785E4339974C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98CD8C56-3617-425F-9D3C-1A99DDB15A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98CD8C56-3617-425F-9D3C-1A99DDB15A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98CD8C56-3617-425F-9D3C-1A99DDB15A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98CD8C56-3617-425F-9D3C-1A99DDB15A70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C8EE44F5-159D-447B-9B83-2C78AFA53165} = {D501001B-33B6-4337-A439-7E5453AEA00F}
+		{C6B8F5D5-EDD7-4B07-B722-84438096BF5D} = {C8EE44F5-159D-447B-9B83-2C78AFA53165}
+		{98CD8C56-3617-425F-9D3C-1A99DDB15A70} = {C8EE44F5-159D-447B-9B83-2C78AFA53165}
+		{636F0BC6-0AF0-4FA9-AD1C-65D0E4F6B932} = {C8EE44F5-159D-447B-9B83-2C78AFA53165}
+		{371E8DE2-8A6A-442A-B799-785E4339974C} = {C8EE44F5-159D-447B-9B83-2C78AFA53165}
+	EndGlobalSection
+EndGlobal
