@@ -1,11 +1,12 @@
 ﻿using System.Threading.Tasks;
+using Athena.Stocks.Application.Models;
+using Athena.Stocks.Application.Services;
 using Athena.Stocks.Infrastructure.Api;
 using Athena.Stocks.Infrastructure.Mapping;
-using Athena.Stocks.WebApi.Models;
 
 namespace Athena.Stocks.Infrastructure.Services
 {
-    public class StockDataService
+    public class StockDataService : IStockDataService
     {
         private readonly IStockDataApi _stockDataApi;
 

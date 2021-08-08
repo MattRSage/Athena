@@ -1,5 +1,5 @@
-﻿using Athena.Stocks.Infrastructure.Api.Responses;
-using Athena.Stocks.WebApi.Models;
+﻿using Athena.Stocks.Application.Models;
+using Athena.Stocks.Infrastructure.Api.Responses;
 
 namespace Athena.Stocks.Infrastructure.Mapping
 {

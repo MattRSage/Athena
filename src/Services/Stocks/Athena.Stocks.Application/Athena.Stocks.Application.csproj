@@ -2,7 +2,11 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
-        <RootNamespace>Athena.Stocks.WebApi</RootNamespace>
+        <RootNamespace>Athena.Stocks.Application</RootNamespace>
     </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Athena.Stocks.Domain\Athena.Stocks.Domain.csproj" />
+    </ItemGroup>
 
 </Project>

@@ -5,7 +5,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\BuildingBlocks\Athena.BuildingBlocks.Domain\Athena.BuildingBlocks.Domain.csproj" />
+        <PackageReference Include="MediatR" Version="9.0.0" />
     </ItemGroup>
-
 </Project>

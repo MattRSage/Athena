@@ -1,4 +1,4 @@
-﻿namespace Athena.Stocks.WebApi.Models
+﻿namespace Athena.Stocks.Application.Models
 {
     public class IncomeStatementRequest
     {
