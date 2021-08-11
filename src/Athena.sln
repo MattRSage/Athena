@@ -16,6 +16,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Stocks", "Stocks", "{C8EE44
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Athena.BuildingBlocks.Domain", "BuildingBlocks\Athena.BuildingBlocks.Domain\Athena.BuildingBlocks.Domain.csproj", "{EE9E9EA8-990A-4CD4-BF35-DE15F6B2087C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Athena.BuildingBlocks.Infrastructure", "BuildingBlocks\Athena.BuildingBlocks.Infrastructure\Athena.BuildingBlocks.Infrastructure.csproj", "{BCF12680-9B61-49D3-8B8C-04B909C013E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Athena.BuildingBlocks.Infrastructure.EntityFramework", "BuildingBlocks\Athena.BuildingBlocks.Infrastructure.EntityFramework\Athena.BuildingBlocks.Infrastructure.EntityFramework.csproj", "{F14A9EDA-4D6D-4387-B372-F6BB62436580}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Athena.BuildingBlocks.Application", "BuildingBlocks\Athena.BuildingBlocks.Application\Athena.BuildingBlocks.Application.csproj", "{0DF42505-2F12-436C-92D6-1B77809323FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Athena.BuildingBlocks.EntityFramework", "BuildingBlocks\Athena.BuildingBlocks.EntityFramework\Athena.BuildingBlocks.EntityFramework.csproj", "{335E2EAB-703E-46B6-976C-D427C3DF56F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +50,22 @@ Global
 		{EE9E9EA8-990A-4CD4-BF35-DE15F6B2087C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE9E9EA8-990A-4CD4-BF35-DE15F6B2087C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE9E9EA8-990A-4CD4-BF35-DE15F6B2087C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF12680-9B61-49D3-8B8C-04B909C013E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF12680-9B61-49D3-8B8C-04B909C013E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF12680-9B61-49D3-8B8C-04B909C013E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF12680-9B61-49D3-8B8C-04B909C013E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F14A9EDA-4D6D-4387-B372-F6BB62436580}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F14A9EDA-4D6D-4387-B372-F6BB62436580}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F14A9EDA-4D6D-4387-B372-F6BB62436580}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F14A9EDA-4D6D-4387-B372-F6BB62436580}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DF42505-2F12-436C-92D6-1B77809323FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DF42505-2F12-436C-92D6-1B77809323FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DF42505-2F12-436C-92D6-1B77809323FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DF42505-2F12-436C-92D6-1B77809323FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{335E2EAB-703E-46B6-976C-D427C3DF56F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{335E2EAB-703E-46B6-976C-D427C3DF56F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{335E2EAB-703E-46B6-976C-D427C3DF56F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{335E2EAB-703E-46B6-976C-D427C3DF56F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C8EE44F5-159D-447B-9B83-2C78AFA53165} = {D501001B-33B6-4337-A439-7E5453AEA00F}
@@ -50,5 +74,9 @@ Global
 		{636F0BC6-0AF0-4FA9-AD1C-65D0E4F6B932} = {C8EE44F5-159D-447B-9B83-2C78AFA53165}
 		{371E8DE2-8A6A-442A-B799-785E4339974C} = {C8EE44F5-159D-447B-9B83-2C78AFA53165}
 		{EE9E9EA8-990A-4CD4-BF35-DE15F6B2087C} = {998FC1DD-B1AD-4609-82B6-7B10C90C1901}
+		{BCF12680-9B61-49D3-8B8C-04B909C013E4} = {998FC1DD-B1AD-4609-82B6-7B10C90C1901}
+		{F14A9EDA-4D6D-4387-B372-F6BB62436580} = {998FC1DD-B1AD-4609-82B6-7B10C90C1901}
+		{0DF42505-2F12-436C-92D6-1B77809323FB} = {998FC1DD-B1AD-4609-82B6-7B10C90C1901}
+		{335E2EAB-703E-46B6-976C-D427C3DF56F3} = {998FC1DD-B1AD-4609-82B6-7B10C90C1901}
 	EndGlobalSection
 EndGlobal

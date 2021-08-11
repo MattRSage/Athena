@@ -1,7 +1,7 @@
 ﻿using System;
 using Athena.BuildingBlocks.Domain.ValueObjects;
 
-namespace Athena.Stocks.Domain
+namespace Athena.Stocks.Domain.Stocks
 {
     public class StockId : TypedIdValueBase
     {
