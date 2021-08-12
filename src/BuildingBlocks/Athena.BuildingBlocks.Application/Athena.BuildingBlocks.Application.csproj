@@ -12,6 +12,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Athena.BuildingBlocks.Domain\Athena.BuildingBlocks.Domain.csproj" />
+      <ProjectReference Include="..\Athena.BuildingBlocks.Outbox\Athena.BuildingBlocks.Outbox.csproj" />
     </ItemGroup>
 
 </Project>

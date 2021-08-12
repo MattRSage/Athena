@@ -20,7 +20,7 @@ namespace Athena.BuildingBlocks.Infrastructure.EntityFramework.Setup
 
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterModule(new InfrastructureAutofacModule());
+            builder.RegisterModule(new InfrastructureBaseAutofacModule());
 
             builder.RegisterType<DomainEventsAccessor<TDbContext>>().AsImplementedInterfaces().InstancePerDependency();
             builder.RegisterType<UnitOfWork<TDbContext>>().AsImplementedInterfaces().InstancePerLifetimeScope();

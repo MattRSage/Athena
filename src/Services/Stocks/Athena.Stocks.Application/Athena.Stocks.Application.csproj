@@ -6,6 +6,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="MediatR.Extensions.Autofac.DependencyInjection" Version="7.1.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\BuildingBlocks\Athena.BuildingBlocks.Application\Athena.BuildingBlocks.Application.csproj" />
       <ProjectReference Include="..\Athena.Stocks.Domain\Athena.Stocks.Domain.csproj" />
     </ItemGroup>
 

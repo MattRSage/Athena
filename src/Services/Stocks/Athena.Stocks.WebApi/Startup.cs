@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Athena.Stocks.Application.Setup;
+using Athena.Stocks.Infrastructure.Setup;
+using Autofac;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -33,6 +36,12 @@ namespace Athena.Stocks.WebApi
             });
         }
 
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterModule(new ApplicationAutofacModule(Configuration.GetConnectionString("Database")));
+            builder.RegisterModule(new InfrastructureAutofacModule(Configuration.GetConnectionString("Database")));
+        }
+        
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

@@ -18,6 +18,8 @@ namespace Athena.Stocks.Infrastructure.EntityConfigurations
             builder.OwnsOne(x => x.TotalRevenue).Property(x => x.Currency).HasColumnName("TotalRevenueCurrency");
             builder.HasOne<StockExchange>().WithMany().HasForeignKey("StockExchangeId").IsRequired();
             builder.Property(x => x.ForwardPeRatio);
+            
+            builder.Ignore(x => x.DomainEvents);
         }
     }
 }

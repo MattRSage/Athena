@@ -2,7 +2,7 @@
 
 namespace Athena.BuildingBlocks.Infrastructure.Setup
 {
-    public class InfrastructureAutofacModule : Autofac.Module
+    public class InfrastructureBaseAutofacModule : Autofac.Module
     {
         protected override void Load(ContainerBuilder builder)
         {

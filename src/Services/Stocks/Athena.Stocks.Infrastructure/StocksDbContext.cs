@@ -21,6 +21,7 @@ namespace Athena.Stocks.Infrastructure
         {
             modelBuilder.HasDefaultSchema("Athena.Stocks");
             modelBuilder.ApplyConfiguration(new StockEntityConfiguration());
+            modelBuilder.ApplyConfiguration(new StockEntityConfiguration());
         }
 
         public class StocksDbContextDesignFactory : IDesignTimeDbContextFactory<StocksDbContext>
