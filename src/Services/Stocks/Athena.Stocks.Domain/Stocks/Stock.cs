@@ -6,38 +6,47 @@ namespace Athena.Stocks.Domain.Stocks
 {
     public class Stock : Entity<StockId>, IAggregateRoot
     {
-        public string Symbol { get; }
-        public string CompanyName { get; }
-        public StockExchangeId StockExchangeId { get; }
-        public MoneyValue MarketCap { get; private set; }
-        public MoneyValue TotalRevenue { get; private set; }
-        public decimal ForwardPeRatio { get; private set; }
+        private string _symbol;
+
+        private string _companyName;
+
+        private StockExchangeId _stockExchangeId;
+
+        private MoneyValue _marketCap;
+
+        private MoneyValue _totalRevenue;
+
+        private decimal _forwardPeRatio;
+
+        public static Stock AddNew(StockExchangeId stockExchangeId, IStockLookup stockLookup, string symbol)
+        {
+            return new (symbol, stockExchangeId, stockLookup);
+        }
+
+        private Stock()
+        {
+        }
 
         private Stock(string symbol, StockExchangeId stockExchangeId, IStockLookup stockLookup)
         {
-            Symbol = symbol;
-            StockExchangeId = stockExchangeId;
-            CompanyName = stockLookup.GetStockName(symbol).GetAwaiter().GetResult();;
-        }
-
-        public static Stock Create(string symbol, StockExchangeId stockExchangeId, IStockLookup stockLookup)
-        {
-            return new(symbol, stockExchangeId, stockLookup);
+            _symbol = symbol;
+            _stockExchangeId = stockExchangeId;
+            _companyName = stockLookup.GetStockName(symbol).GetAwaiter().GetResult();
         }
 
         public void UpdateMarketCap(MoneyValue marketCap)
         {
-            MarketCap = marketCap;
+            _marketCap = marketCap;
         }
 
         public void UpdateTotalRevenue(MoneyValue totalRevenue)
         {
-            TotalRevenue = totalRevenue;
+            _totalRevenue = totalRevenue;
         }
 
         public void UpdateForwardPeRatio(decimal forwardPeRatio)
         {
-            ForwardPeRatio = forwardPeRatio;
+            _forwardPeRatio = forwardPeRatio;
         }
     }
 }

@@ -7,11 +7,19 @@
 
     <ItemGroup>
         <PackageReference Include="MediatR.Extensions.Autofac.DependencyInjection" Version="7.1.0" />
+        <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
     
     <ItemGroup>
       <ProjectReference Include="..\..\..\BuildingBlocks\Athena.BuildingBlocks.Application\Athena.BuildingBlocks.Application.csproj" />
       <ProjectReference Include="..\Athena.Stocks.Domain\Athena.Stocks.Domain.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Folder Include="StockExchanges" />
     </ItemGroup>
 
 </Project>

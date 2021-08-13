@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Athena.Stocks.Infrastructure.EntityConfigurations
+namespace Athena.Stocks.Infrastructure.Domain.StockExchanges
 {
     public class StockExchangeEntityConfiguration : IEntityTypeConfiguration<StockExchange>
     {
         public void Configure(EntityTypeBuilder<StockExchange> builder)
         {
+            builder.ToTable("StockExchanges", "stocks");
+
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Name);
-            
+            builder.Property<string>("_name").HasColumnName("Name").HasMaxLength(100);
+
             builder.Ignore(x => x.DomainEvents);
         }
     }

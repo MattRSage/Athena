@@ -5,7 +5,8 @@ namespace Athena.Stocks.Domain.Stocks
 {
     public class StockId : TypedIdValueBase
     {
-        public StockId(Guid value) : base(value)
+        public StockId(Guid value)
+            : base(value)
         {
         }
     }
