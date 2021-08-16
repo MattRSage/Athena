@@ -3,7 +3,6 @@ using Athena.Stocks.Application.Contracts;
 using Athena.Stocks.Infrastructure.Configuration;
 using Athena.Stocks.Infrastructure.Configuration.Processing;
 using Autofac;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
 using MediatR;
 
 namespace Athena.Stocks.Infrastructure

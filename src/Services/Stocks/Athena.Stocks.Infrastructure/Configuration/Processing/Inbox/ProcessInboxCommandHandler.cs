@@ -28,13 +28,13 @@ namespace Athena.Stocks.Infrastructure.Configuration.Processing.Inbox
                                $"[InboxMessage].[Id] AS [{nameof(InboxMessageDto.Id)}], " +
                                $"[InboxMessage].[Type] AS [{nameof(InboxMessageDto.Type)}], " +
                                $"[InboxMessage].[Data] AS [{nameof(InboxMessageDto.Data)}] " +
-                               "FROM [meetings].[InboxMessages] AS [InboxMessage] " +
+                               "FROM [stocks].[InboxMessages] AS [InboxMessage] " +
                                "WHERE [InboxMessage].[ProcessedDate] IS NULL " +
                                "ORDER BY [InboxMessage].[OccurredOn]";
 
             var messages = await connection.QueryAsync<InboxMessageDto>(sql);
 
-            const string sqlUpdateProcessedDate = "UPDATE [meetings].[InboxMessages] " +
+            const string sqlUpdateProcessedDate = "UPDATE [stocks].[InboxMessages] " +
                                                   "SET [ProcessedDate] = @Date " +
                                                   "WHERE [Id] = @Id";
 

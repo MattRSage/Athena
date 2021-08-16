@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration.Processing.Outbox;
 using Quartz;
 
 namespace Athena.Stocks.Infrastructure.Configuration.Processing.Outbox

@@ -24,6 +24,8 @@ namespace Athena.Stocks.Infrastructure.Configuration
             ConfigureCompositionRoot(
                 connectionString,
                 moduleLogger);
+
+            QuartzStartup.Initialize(moduleLogger);
         }
 
         private static void ConfigureCompositionRoot(

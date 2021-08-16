@@ -7,16 +7,16 @@ namespace Athena.BuildingBlocks.Infrastructure.DomainEventsDispatching
 {
     public class DomainEventsAccessor : IDomainEventsAccessor
     {
-        private readonly DbContext _meetingsContext;
+        private readonly DbContext _stocksContext;
 
-        public DomainEventsAccessor(DbContext meetingsContext)
+        public DomainEventsAccessor(DbContext stocksContext)
         {
-            _meetingsContext = meetingsContext;
+            _stocksContext = stocksContext;
         }
 
         public IReadOnlyCollection<IDomainEvent> GetAllDomainEvents()
         {
-            var domainEntities = this._meetingsContext.ChangeTracker
+            var domainEntities = this._stocksContext.ChangeTracker
                 .Entries<Entity>()
                 .Where(x => x.Entity.DomainEvents != null && x.Entity.DomainEvents.Any()).ToList();
 
@@ -27,7 +27,7 @@ namespace Athena.BuildingBlocks.Infrastructure.DomainEventsDispatching
 
         public void ClearAllDomainEvents()
         {
-            var domainEntities = this._meetingsContext.ChangeTracker
+            var domainEntities = this._stocksContext.ChangeTracker
                 .Entries<Entity>()
                 .Where(x => x.Entity.DomainEvents != null && x.Entity.DomainEvents.Any()).ToList();
 

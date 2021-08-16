@@ -4,7 +4,6 @@ using Athena.BuildingBlocks.Infrastructure.DomainEventsDispatching;
 using Athena.Stocks.Application.Configuration.Commands;
 using Athena.Stocks.Infrastructure.Configuration.Processing.InternalCommands;
 using Autofac;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
 using MediatR;
 
 namespace Athena.Stocks.Infrastructure.Configuration.Processing

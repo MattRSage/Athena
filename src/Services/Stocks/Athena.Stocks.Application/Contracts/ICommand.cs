@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Runtime.InteropServices.ComTypes;
 using MediatR;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.Contracts
+namespace Athena.Stocks.Application.Contracts
 {
     public interface ICommand<out TResult> : IRequest<TResult>
     {

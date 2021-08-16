@@ -1,4 +1,5 @@
-﻿using Athena.BuildingBlocks.Infrastructure;
+﻿using Athena.BuildingBlocks.Application.Data;
+using Athena.BuildingBlocks.Infrastructure;
 using Autofac;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
@@ -16,6 +17,11 @@ namespace Athena.Stocks.Infrastructure.Configuration.DataAccess
 
         protected override void Load(ContainerBuilder builder)
         {
+            builder.RegisterType<SqlConnectionFactory>()
+                .As<ISqlConnectionFactory>()
+                .WithParameter("connectionString", _databaseConnectionString)
+                .InstancePerLifetimeScope();
+            
             builder
                 .Register(c =>
                 {

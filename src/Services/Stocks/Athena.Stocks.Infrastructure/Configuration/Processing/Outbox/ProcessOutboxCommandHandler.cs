@@ -5,7 +5,6 @@ using Athena.BuildingBlocks.Application.Data;
 using Athena.BuildingBlocks.Application.Events;
 using Athena.BuildingBlocks.Infrastructure.DomainEventsDispatching;
 using Athena.Stocks.Application.Configuration.Commands;
-using CompanyName.MyMeetings.Modules.Meetings.Infrastructure.Configuration.Processing.Outbox;
 using Dapper;
 using MediatR;
 using Newtonsoft.Json;
@@ -40,14 +39,14 @@ namespace Athena.Stocks.Infrastructure.Configuration.Processing.Outbox
                          $"[OutboxMessage].[Id] AS [{nameof(OutboxMessageDto.Id)}], " +
                          $"[OutboxMessage].[Type] AS [{nameof(OutboxMessageDto.Type)}], " +
                          $"[OutboxMessage].[Data] AS [{nameof(OutboxMessageDto.Data)}] " +
-                         "FROM [meetings].[OutboxMessages] AS [OutboxMessage] " +
+                         "FROM [stocks].[OutboxMessages] AS [OutboxMessage] " +
                          "WHERE [OutboxMessage].[ProcessedDate] IS NULL " +
                          "ORDER BY [OutboxMessage].[OccurredOn]";
 
             var messages = await connection.QueryAsync<OutboxMessageDto>(sql);
             var messagesList = messages.AsList();
 
-            const string sqlUpdateProcessedDate = "UPDATE [meetings].[OutboxMessages] " +
+            const string sqlUpdateProcessedDate = "UPDATE [stocks].[OutboxMessages] " +
                                                   "SET [ProcessedDate] = @Date " +
                                                   "WHERE [Id] = @Id";
             if (messagesList.Count > 0)

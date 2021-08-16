@@ -3,8 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Athena.BuildingBlocks.Infrastructure;
 using Athena.Stocks.Application.Configuration.Commands;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+using Athena.Stocks.Application.Contracts;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

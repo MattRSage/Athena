@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+using Athena.Stocks.Application.Contracts;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands
+namespace Athena.Stocks.Application.Configuration.Commands
 {
     public interface ICommandsScheduler
     {

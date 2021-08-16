@@ -1,7 +1,7 @@
-﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+﻿using Athena.Stocks.Application.Contracts;
 using MediatR;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Queries
+namespace Athena.Stocks.Application.Configuration.Queries
 {
     public interface IQueryHandler<in TQuery, TResult> :
         IRequestHandler<TQuery, TResult>

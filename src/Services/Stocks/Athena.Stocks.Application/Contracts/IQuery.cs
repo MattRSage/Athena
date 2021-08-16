@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.Contracts
+namespace Athena.Stocks.Application.Contracts
 {
     public interface IQuery<out TResult> : IRequest<TResult>
     {

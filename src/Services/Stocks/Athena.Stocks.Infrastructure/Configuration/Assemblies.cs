@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Commands;
+using Athena.Stocks.Application.Configuration.Commands;
 
 namespace Athena.Stocks.Infrastructure.Configuration
 {

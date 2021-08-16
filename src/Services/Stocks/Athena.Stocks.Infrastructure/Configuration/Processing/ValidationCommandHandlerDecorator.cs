@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Athena.BuildingBlocks.Application;
 using Athena.Stocks.Application.Configuration.Commands;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+using Athena.Stocks.Application.Contracts;
 using FluentValidation;
 using MediatR;
 

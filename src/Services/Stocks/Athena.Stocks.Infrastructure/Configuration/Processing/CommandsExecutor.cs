@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
+using Athena.Stocks.Application.Contracts;
 using Autofac;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
 using MediatR;
 
 namespace Athena.Stocks.Infrastructure.Configuration.Processing

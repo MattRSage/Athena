@@ -1,7 +1,7 @@
 ﻿using System;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+using Athena.Stocks.Application.Contracts;
 
-namespace CompanyName.MyMeetings.Modules.Meetings.Application.Configuration.Queries
+namespace Athena.Stocks.Application.Configuration.Queries
 {
     public abstract class QueryBase<TResult> : IQuery<TResult>
     {

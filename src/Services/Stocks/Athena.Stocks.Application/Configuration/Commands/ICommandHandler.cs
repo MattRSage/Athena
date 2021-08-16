@@ -1,4 +1,4 @@
-﻿using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+﻿using Athena.Stocks.Application.Contracts;
 using MediatR;
 
 namespace Athena.Stocks.Application.Configuration.Commands

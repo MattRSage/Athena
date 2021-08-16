@@ -1,5 +1,5 @@
 ﻿using System;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
+using Athena.Stocks.Application.Contracts;
 
 namespace Athena.Stocks.Application.StockExchanges.AddNewStockExchange
 {

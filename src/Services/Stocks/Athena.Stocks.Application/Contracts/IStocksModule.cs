@@ -1,5 +1,4 @@
 ﻿using System.Threading.Tasks;
-using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
 
 namespace Athena.Stocks.Application.Contracts
 {
