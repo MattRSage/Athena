@@ -1,4 +1,4 @@
-﻿using Athena.BuildingBlocks.Domain.ValueObjects;
+﻿using Athena.BuildingBlocks.Domain;
 
 namespace Athena.Stocks.Domain.Stocks
 {

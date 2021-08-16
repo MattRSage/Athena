@@ -12,8 +12,7 @@ namespace Athena.Stocks.Infrastructure.Domain.StockExchanges
 
             builder.HasKey(x => x.Id);
             builder.Property<string>("_name").HasColumnName("Name").HasMaxLength(100);
-
-            builder.Ignore(x => x.DomainEvents);
+            builder.Property<string>("_exchangeCode").HasColumnName("ExchangeCode").HasMaxLength(5);
         }
     }
 }

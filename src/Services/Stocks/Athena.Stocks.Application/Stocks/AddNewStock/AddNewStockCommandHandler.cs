@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Athena.BuildingBlocks.Application;
+using Athena.Stocks.Application.Configuration.Commands;
 using Athena.Stocks.Domain.Services;
 using Athena.Stocks.Domain.StockExchanges;
 using Athena.Stocks.Domain.Stocks;

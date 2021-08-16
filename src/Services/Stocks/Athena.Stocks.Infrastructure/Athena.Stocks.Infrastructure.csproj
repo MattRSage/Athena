@@ -5,6 +5,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Autofac" Version="4.9.2" />
+        <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.4.0" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.5" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.5">
             <PrivateAssets>all</PrivateAssets>
@@ -12,6 +14,8 @@
         </PackageReference>
         <PackageReference Include="Refit" Version="6.0.94" />
         <PackageReference Include="Refit.HttpClientFactory" Version="6.0.94" />
+        <PackageReference Include="Polly" Version="7.2.1" />
+        <PackageReference Include="Quartz" Version="3.0.7" />
         <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -19,7 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\..\BuildingBlocks\Athena.BuildingBlocks.Infrastructure.EntityFramework\Athena.BuildingBlocks.Infrastructure.EntityFramework.csproj" />
+        <ProjectReference Include="..\..\..\BuildingBlocks\Athena.BuildingBlocks.Infrastructure\Athena.BuildingBlocks.Infrastructure.csproj" />
         <ProjectReference Include="..\Athena.Stocks.Application\Athena.Stocks.Application.csproj" />
     </ItemGroup>
 

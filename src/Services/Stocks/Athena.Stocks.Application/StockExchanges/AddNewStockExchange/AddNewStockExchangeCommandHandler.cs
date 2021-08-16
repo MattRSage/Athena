@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Athena.BuildingBlocks.Application;
+using Athena.Stocks.Application.Configuration.Commands;
 using Athena.Stocks.Domain.StockExchanges;
-using MediatR;
 
-namespace Athena.Stocks.Application.AddNewStockExchange
+namespace Athena.Stocks.Application.StockExchanges.AddNewStockExchange
 {
     public class AddNewStockExchangeCommandHandler : ICommandHandler<AddNewStockExchangeCommand, Guid>
     {
@@ -18,7 +17,7 @@ namespace Athena.Stocks.Application.AddNewStockExchange
 
         public async Task<Guid> Handle(AddNewStockExchangeCommand request, CancellationToken cancellationToken)
         {
-            var stockExchange = StockExchange.AddNew(request.Name);
+            var stockExchange = StockExchange.AddNew(request.Name, request.ExchangeCode);
 
             await _stockExchangeRepository.AddAsync(stockExchange);
 

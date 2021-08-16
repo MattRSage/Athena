@@ -1,11 +1,14 @@
-﻿using Athena.BuildingBlocks.Domain.Entities;
+﻿using System;
+using Athena.BuildingBlocks.Domain;
 using Athena.Stocks.Domain.Services;
 using Athena.Stocks.Domain.StockExchanges;
 
 namespace Athena.Stocks.Domain.Stocks
 {
-    public class Stock : Entity<StockId>, IAggregateRoot
+    public class Stock : Entity, IAggregateRoot
     {
+        public StockId Id { get; private set; }
+
         private string _symbol;
 
         private string _companyName;
@@ -29,6 +32,7 @@ namespace Athena.Stocks.Domain.Stocks
 
         private Stock(string symbol, StockExchangeId stockExchangeId, IStockLookup stockLookup)
         {
+            Id = new StockId(Guid.NewGuid());
             _symbol = symbol;
             _stockExchangeId = stockExchangeId;
             _companyName = stockLookup.GetStockName(symbol).GetAwaiter().GetResult();

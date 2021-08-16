@@ -5,18 +5,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="FluentValidation" Version="10.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+        <PackageReference Include="MediatR" Version="6.0.0" />
         <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Athena.BuildingBlocks.Domain\Athena.BuildingBlocks.Domain.csproj" />
-      <ProjectReference Include="..\Athena.BuildingBlocks.Outbox\Athena.BuildingBlocks.Outbox.csproj" />
     </ItemGroup>
 
 </Project>

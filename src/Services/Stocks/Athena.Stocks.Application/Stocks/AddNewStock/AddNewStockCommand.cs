@@ -1,9 +1,10 @@
 ﻿using System;
 using Athena.BuildingBlocks.Application;
+using CompanyName.MyMeetings.Modules.Meetings.Application.Contracts;
 
 namespace Athena.Stocks.Application.Stocks.AddNewStock
 {
-    public class AddNewStockCommand : ICommand<Guid>
+    public class AddNewStockCommand : CommandBase<Guid>
     {
         public AddNewStockCommand(Guid stockExchangeId, string symbol)
         {
