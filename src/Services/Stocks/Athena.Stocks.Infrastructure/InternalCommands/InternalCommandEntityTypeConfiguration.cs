@@ -12,6 +12,8 @@ namespace Athena.Stocks.Infrastructure.InternalCommands
 
             builder.HasKey(b => b.Id);
             builder.Property(b => b.Id).ValueGeneratedNever();
+            builder.Property(b => b.Type).HasMaxLength(255).IsRequired();
+            builder.Property(b => b.Data).IsRequired();
         }
     }
 }

@@ -6,7 +6,7 @@ namespace Athena.Stocks.Infrastructure.Api.Responses
     {
         [JsonPropertyName("marketcap")]
         public long MarketCap { get; set; }
-        
+
         [JsonPropertyName("totalRevenue")]
         public long TotalRevenue { get; set; }
 

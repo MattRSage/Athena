@@ -6,5 +6,7 @@ namespace Athena.Stocks.Application.Services
     public interface IStockDataService
     {
         Task<IncomeStatementResult> GetIncomeStatement(string symbol);
+
+        Task<string> GetStockName(string symbol);
     }
 }

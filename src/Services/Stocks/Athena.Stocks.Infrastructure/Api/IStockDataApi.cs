@@ -9,6 +9,9 @@ namespace Athena.Stocks.Infrastructure.Api
         [Get("/stock/{symbol}/income")]
         Task<IncomeStatementResponse> GetIncomeStatement(string symbol);
 
+        [Get("/stock/{symbol}/stats")]
+        Task<KeyStatsResponse> GetKeyStats(string symbol);
+
         [Get("/stock/{symbol}/advanced-stats")]
         Task<AdvancedStatsResponse> GetAdvancedStats(string symbol);
     }

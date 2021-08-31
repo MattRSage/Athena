@@ -28,7 +28,7 @@ namespace Athena.Stocks.Infrastructure.Configuration.Processing.InternalCommands
                                $"[Command].[Id] AS [{nameof(InternalCommandDto.Id)}], " +
                                $"[Command].[Type] AS [{nameof(InternalCommandDto.Type)}], " +
                                $"[Command].[Data] AS [{nameof(InternalCommandDto.Data)}] " +
-                               "FROM [meetings].[InternalCommands] AS [Command] " +
+                               "FROM [stocks].[InternalCommands] AS [Command] " +
                                "WHERE [Command].[ProcessedDate] IS NULL " +
                                "ORDER BY [Command].[EnqueueDate]";
             var commands = await connection.QueryAsync<InternalCommandDto>(sql);
@@ -51,7 +51,7 @@ namespace Athena.Stocks.Infrastructure.Configuration.Processing.InternalCommands
                 if (result.Outcome == OutcomeType.Failure)
                 {
                     await connection.ExecuteScalarAsync(
-                        "UPDATE [meetings].[InternalCommands] " +
+                        "UPDATE [stocks].[InternalCommands] " +
                                                         "SET ProcessedDate = @NowDate, " +
                                                         "Error = @Error " +
                                                         "WHERE [Id] = @Id",

@@ -20,5 +20,11 @@ namespace Athena.Stocks.Infrastructure.Services
             var response = await _stockDataApi.GetIncomeStatement(symbol);
             return response.ToIncomeStatementResult();
         }
+
+        public async Task<string> GetStockName(string symbol)
+        {
+            var response = await _stockDataApi.GetKeyStats(symbol);
+            return response.CompanyName;
+        }
     }
 }

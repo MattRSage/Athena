@@ -2,6 +2,7 @@
 using Athena.BuildingBlocks.Infrastructure;
 using Athena.BuildingBlocks.Infrastructure.DomainEventsDispatching;
 using Athena.Stocks.Application.Configuration.Commands;
+using Athena.Stocks.Infrastructure.Api;
 using Athena.Stocks.Infrastructure.Configuration.Processing.InternalCommands;
 using Autofac;
 using MediatR;

@@ -41,7 +41,7 @@ namespace Athena.Stocks.Infrastructure.Migrations
                     b.ToTable("OutboxMessages", "stocks");
                 });
 
-            modelBuilder.Entity("Athena.BuildingBlocks.Infrastructure.InternalCommands.InternalCommand", b =>
+            modelBuilder.Entity("Athena.BuildingBlocks.Infrastructure.Inbox.InboxMessage", b =>
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uniqueidentifier");
@@ -49,11 +49,42 @@ namespace Athena.Stocks.Infrastructure.Migrations
                     b.Property<string>("Data")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("OccurredOn")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("ProcessedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("InboxMessages", "stocks");
+                });
+
+            modelBuilder.Entity("Athena.BuildingBlocks.Infrastructure.InternalCommands.InternalCommand", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Data")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("EnqueueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Error")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ProcessedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.HasKey("Id");
 
